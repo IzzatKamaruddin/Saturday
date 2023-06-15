@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Proposal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      color: #db214f;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #ff3366;
+      border-radius: 5px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    #girlfriendName
+    { 
+         color:red;
+    } 
+
+    button {
+      --b: 0.5px;   /* border thickness */
+      --s: .15em; /* size of the corner */
+      --c: #BD5532;
+      
+      padding: calc(.9em + var(--s)) calc(.90em + var(--s));
+      color: var(--c);
+      --_p: var(--s);
+      background:
+        conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+        var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+      transition: .3s linear, color 0s, background-color 0s;
+      outline: var(--b) solid #8b1432;
+      outline-offset: .2em;
+    }
+    button:hover,
+    button:focus-visible{
+      --_p: 0px;
+      outline-color: var(--c);
+      outline-offset: .10em;
+    }
+    button:active {
+      background: var(--c);
+      color: #fff;
+    }
+    
+    body {
+      height: 100vh;
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+      place-content: center;
+      background: #DAEDFB;
+    }
+    button {
+      font-family: system-ui, sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+      cursor: pointer;
+      border: none;
+      margin: .5em;
+    }
+
+  </style>
+  <script>
+    function submitProposal() {
+      var girlfriendName = "Aisyah Hasni";
+      var dateIdea = document.getElementById("dateIdea").value;
+      var dateAndTime = document.getElementById("dateAndTime").value;
+      
+      var proposalMessage = "Dear " + girlfriendName + ",\n\n";
+      proposalMessage += "I hope this message finds you well. I wanted to take this opportunity to ask you on a special date.\n\n";
+      proposalMessage += "Would you accompany me to " + dateIdea + " on " + dateAndTime + "? I believe it would be a wonderful experience to spend quality time together and create beautiful memories.\n\n";
+      proposalMessage += "Please let me know if this proposal brings a smile to your face and if you'd like to join me. Your happiness means the world to me, and I look forward to your response.\n\n";
+      proposalMessage += "With all my love,\n";
+      proposalMessage += "[Izzat Kamaruddin]";
+      
+      alert(proposalMessage);
+    }
+  </script>
+</head>
+<body>
+    
+  <div class="container">
+  
+    <h1>&#128151; Date Proposal &#128525;</h1>
+
+    <label for="girlfriendName">Girlfriend's Name:</label>
+    <input type="text" id="girlfriendName" placeholder="Aisyah Hasni" readonly>
+    
+    <label for="dateIdea">Date Idea:</label>
+    <input type="text" id="dateIdea" placeholder="Enter your date idea" required>
+    
+    <label for="dateAndTime">Date and Time:</label>
+    <input type="datetime-local" id="dateAndTime" placeholder="Enter the date and time" required><br>
+    <br><br>
+
+    <div style = "display: flex; justify-content: center;"> 
+    <button style="--c: #000000; --b: 3px; font-size: 12px;" onclick="submitProposal()">Submit Proposal</button>
+    </div>
+  </div>
+</body>
+</html>
